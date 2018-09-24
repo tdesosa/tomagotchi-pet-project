@@ -31,7 +31,8 @@ class Tomagotchi {
     }    
 };
 
-
+const tDiddy = new Tomagotchi("tDiddy", 1, 1, 1, 1);
+console.log(tDiddy);
 
 
 // class Person {
