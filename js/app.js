@@ -5,7 +5,7 @@
     // Create a repo for your tomagotchi pet
     // make a commit after you finish each one of the following
     // Create a Class (JS Class, look at your notes if your forget) for your tomagotchi
-    // Instatiate your Tomagotchi
+    // Instantiate your Tomagotchi
     // Display a character of your choice on the screen to represent your pet
     // Display the following metrics for your pet:
     // Hunger (1-10 scale)
@@ -21,6 +21,8 @@
     // Morph your pet at certain ages.
     // Animate your pet across the screen while it's alive.
 
+// CREATE A TOMAGOTCHI CLASS
+
 class Tomagotchi {
     constructor(name, age, hunger, sleepiness, boredom) {
         this.name = name;
@@ -31,18 +33,32 @@ class Tomagotchi {
     }    
 };
 
+// INSTANTIATE THE TOMAGOTCHI CLASS
 
 const newTomagotchi = new Tomagotchi;
 console.log(newTomagotchi);
 
-$('#metrics').append(`Age: ${newTomagotchi.age}  `);
+$('#age').append(`${newTomagotchi.age}  `);
 
-$('#metrics').append(`Hunger: ${newTomagotchi.hunger}  `);
+// CREATE BUTTONS TO INTERACT WITH TOMAGOTCHI
 
-$('#metrics').append(`Sleepiness: ${newTomagotchi.sleepiness}  `);
+$('#feed').on('click', () => {
+    $('#hunger').text(`Hunger: ${newTomagotchi.hunger}  `);
+    newTomagotchi.hunger++;
+    //console.log('Lets eat!');
+});
 
-$('#metrics').append(`Boredom: ${newTomagotchi.boredom}  `);
+$('#lights').on('click', () => {
+    $('#sleepiness').text(`Sleepiness: ${newTomagotchi.sleepiness}  `);
+    newTomagotchi.sleepiness++;
+    //console.log('Im tired!');
+});
 
+$('#play').on('click', () => {
+    $('#boredom').text(`Boredom: ${newTomagotchi.boredom}  `);
+    newTomagotchi.boredom++;
+    //console.log('Lets play!');
+});
 
 // class Person {
 //     constructor(name, eyeColor){
