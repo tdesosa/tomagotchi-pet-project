@@ -38,53 +38,75 @@ class Tomagotchi {
 const newTomagotchi = new Tomagotchi;
 console.log(newTomagotchi);
 
-$('#age').append(`${newTomagotchi.age}  `);
-
 // CREATE BUTTONS TO INTERACT WITH TOMAGOTCHI
 
 $('#feed').on('click', () => {
     $('#hunger').text(`Hunger: ${newTomagotchi.hunger}  `);
-    newTomagotchi.hunger++;
+    newTomagotchi.hunger--;
     //console.log('Lets eat!');
 });
 
 $('#lights').on('click', () => {
     $('#sleepiness').text(`Sleepiness: ${newTomagotchi.sleepiness}  `);
-    newTomagotchi.sleepiness++;
+    newTomagotchi.sleepiness--;
     //console.log('Im tired!');
 });
 
 $('#play').on('click', () => {
     $('#boredom').text(`Boredom: ${newTomagotchi.boredom}  `);
-    newTomagotchi.boredom++;
+    newTomagotchi.boredom--;
     //console.log('Lets play!');
 });
 
-// class Person {
-//     constructor(name, eyeColor){
-//         this.legs = 2;
-//         this.arms = 2;
-//         this.eyes = eyeColor;
-//         this.name = name;
-//     }
-//     greet(otherPerson){
-//         console.log(`Hi ${otherPerson}!`);
-//     }
-//     jump(){
-//         console.log("weeee")
-//     }
-// }
+// NAME THE TOMAGOTCHI
 
-// // instatiating a class
-// // Creating an object from our blueprint
+$('#enterName').on('click', () => {
+    const $tomagotchiName = $('input').val();
+    $('.namePlace').append(`Name: ${$tomagotchiName}  `);
+    $('.namePlace').append(`Age: ${newTomagotchi.age}  `);
+    $('.nameTomagotchi').remove();
+    timePasses();
+});
 
-// const bob = new Person("bob", "blue");
-// const joan = new Person("joan", "green");
+// IMPLEMENT A TIMER
+let time = 0;
 
-// console.log(bob);
+const timePasses = () => {
+    const interval = setInterval(() => {
+        time++;
+        $('#time').text(`Time: ${time}s`);
 
-// // edit the properties of our instance on the fly
-// // the instance is just and object
+        if(time % 60 === 0){
+            newTomagotchi.age++;
+            $('#age').text(`Age: ${newTomagotchi.age}  `);
+        }
 
-// bob.eyes = "orange";
-// bob["eyes"] = "red";
+        if(time % 10 === 0){
+            newTomagotchi.hunger++;
+            $('#hunger').text(`Hunger: ${newTomagotchi.hunger}  `);
+        }
+
+        if(time % 20 === 0){
+            newTomagotchi.sleepiness++;
+            $('#sleepiness').text(`Sleepiness: ${newTomagotchi.sleepiness}  `);
+        }
+
+        if(time % 5 === 0){
+            newTomagotchi.boredom++;
+            $('#boredom').text(`Boredom: ${newTomagotchi.boredom}  `);
+        }
+        
+        // if(time === 0){
+        //   clearInterval(interval);
+        //   round++;
+    
+        //   $('#round').text(`round: ${round}`);
+    
+        // }
+    
+        // $('#timer').text(`Timer: ${time}s`)
+        console.log('timer is working');
+      }, 1000);
+};
+
+

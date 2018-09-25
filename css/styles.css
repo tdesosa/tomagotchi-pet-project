@@ -9,10 +9,18 @@ body {
   #myTomagotchiPic {
     width: 300px;
     height: auto;
-
+    margin: 10px;
+    border-color: black;
+    border-style: dotted;
   }
 
   .metrics {
+    font-style: bold;
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  .timerSpace {
     font-style: bold;
     font-size: 25px;
     margin: 10px;
@@ -39,12 +47,30 @@ body {
     height: 50px;
     font-size: 20px;
   }
-  
-  /* h1 {
-    font-family: 'Condiment', cursive;
+
+  input {
+    display: inline-block;
   }
-  
-  button {
-    display: inline;
-    margin: 12px;
+
+  h3 {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  #enterName {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .namePlace {
+    font-style: bold;
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  /* .nameTomagotchi {
+    font-style: bold;
+    font-size: 25px;
+    margin: 10px;
+    display: inline-block;
   } */
