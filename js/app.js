@@ -62,8 +62,7 @@ $('#play').on('click', () => {
 
 $('#enterName').on('click', () => {
     const $tomagotchiName = $('input').val();
-    $('.namePlace').append(`Name: ${$tomagotchiName}  `);
-    $('.namePlace').append(`Age: ${newTomagotchi.age}  `);
+    $('#name').text(`Name: ${$tomagotchiName}  `);
     $('.nameTomagotchi').remove();
     timePasses();
 });
@@ -74,7 +73,7 @@ let time = 0;
 const timePasses = () => {
     const interval = setInterval(() => {
         time++;
-        $('#time').text(`Time: ${time}s`);
+        $('#time').text(`Timer: ${time}s`);
 
         if(time % 60 === 0){
             newTomagotchi.age++;
@@ -95,18 +94,41 @@ const timePasses = () => {
             newTomagotchi.boredom++;
             $('#boredom').text(`Boredom: ${newTomagotchi.boredom}  `);
         }
-        
-        // if(time === 0){
-        //   clearInterval(interval);
-        //   round++;
-    
-        //   $('#round').text(`round: ${round}`);
-    
-        // }
-    
-        // $('#timer').text(`Timer: ${time}s`)
+
+        if(newTomagotchi.hunger === 10){
+            gameOver();
+        }
+
+        if(newTomagotchi.sleepiness === 10){
+            gameOver();
+        }
+
+        if(newTomagotchi.boredom === 10){
+            gameOver();
+        }
+
+        if(newTomagotchi.age >= 1){
+            $('#myTomagotchiPic').attr('src', 'https://www.mcpheebros.com/mcp/wp-content/uploads/2016/11/goat-5-700x450.jpg')
+        }
+
+        if(newTomagotchi.age >= 2){
+            $('#myTomagotchiPic').attr('src', 'https://res.cloudinary.com/teepublic/image/private/s--vfs-_Xf_--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1509079271/production/designs/2003658_1.jpg')
+        }
+
         console.log('timer is working');
-      }, 1000);
+      }, 100);
+};
+
+// while(newTomagotchi.hunger < 10 || newTomagotchi.sleepiness < 10 || newTomagotchi.boredom < 10){
+//     $('#myTomagotchiPic').velocity("fadeIn", { duration: 1500 });
+// };
+
+
+// BUILD A GAME OVER FUNCTION
+
+const gameOver = () => {
+    window.location.reload(true);
+    alert('GAME OVER: Your Goat has died.')
 };
 
 
