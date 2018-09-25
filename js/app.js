@@ -24,15 +24,24 @@
 class Tomagotchi {
     constructor(name, age, hunger, sleepiness, boredom) {
         this.name = name;
-        this.age = age;
-        this.hunger = hunger;
-        this.sleepiness = sleepiness;
-        this.boredom = boredom;
+        this.age = 0;
+        this.hunger = 1;
+        this.sleepiness = 1;
+        this.boredom = 1;
     }    
 };
 
-const tDiddy = new Tomagotchi("tDiddy", 1, 1, 1, 1);
-console.log(tDiddy);
+
+const newTomagotchi = new Tomagotchi;
+console.log(newTomagotchi);
+
+$('#metrics').append(`Age: ${newTomagotchi.age}  `);
+
+$('#metrics').append(`Hunger: ${newTomagotchi.hunger}  `);
+
+$('#metrics').append(`Sleepiness: ${newTomagotchi.sleepiness}  `);
+
+$('#metrics').append(`Boredom: ${newTomagotchi.boredom}  `);
 
 
 // class Person {
