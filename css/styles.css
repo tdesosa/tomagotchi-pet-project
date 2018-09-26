@@ -1,71 +1,126 @@
 body {
     /* background: url('http://www.lord-of-the-rings.org/collections/maps/map10[1].jpg'); */
     background-color: orangered;
-    /* font-size: 24px;
-    text-shadow: 1px 1px white;
-    font-weight: 800; */
+  }
+
+  h1 {
+    text-align: center;
+    border-color: black;
+    border-style: dashed;
+    width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: 'Notable', sans-serif;
+    background-color: grey;
   }
   
   #myTomagotchiPic {
-    width: 300px;
+    width: 200px;
     height: auto;
     margin: 10px;
     border-color: black;
     border-style: dotted;
+    border-radius: 25px;
   }
 
   .metrics {
-    font-style: bold;
+    text-align: center;
+    position: center; 
+    color: black;
+    font-family: 'Notable', sans-serif;
     font-size: 25px;
+    margin: 10px auto;
+    padding: 10px;
+    width: 750px;
+    background-clip: padding-box;
+    background-color: red;
+    border-color: black;
+    border-bottom-style: dashed;
+  }
+
+  #hunger {
+    margin: 10px;
+  }
+
+  #sleepiness {
+    margin: 10px;
+  }
+
+  #boredom {
     margin: 10px;
   }
 
   .timerSpace {
-    font-style: bold;
+    color: black;
+    font-family: 'Notable', sans-serif;
     font-size: 25px;
     margin: 10px;
+    padding: 10px;
+    width: 250px;
   }
 
   .metricButtons {
-    margin: 10px;
+    margin: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
   }
 
   #feed {
     width: 150px;
     height: 50px;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Notable', sans-serif;
   }
 
   #lights {
-    width: 190px;
+    width: 350px;
     height: 50px;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Notable', sans-serif;
   }
 
   #play {
     width: 150px;
     height: 50px;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Notable', sans-serif;
   }
 
   input {
+    font-family: 'Notable', sans-serif;
     display: inline-block;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    margin: 10px;
   }
 
   h2 {
+    font-family: 'Notable', sans-serif;
     display: inline-block;
     margin: 10px;
   }
 
   #enterName {
+    font-family: 'Notable', sans-serif;
     display: inline-block;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
     margin: 10px;
+    padding: 10px;
   }
 
   .namePlace {
+    font-family: 'Notable', sans-serif;
     font-style: bold;
     font-size: 25px;
     margin: 10px;
+    padding: 10px;
+    /* border-color: black;
+    border-style: dashed; */
   }
 
   /* .nameTomagotchi {

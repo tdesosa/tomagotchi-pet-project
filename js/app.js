@@ -65,6 +65,7 @@ $('#enterName').on('click', () => {
     $('#name').text(`Name: ${$tomagotchiName}  `);
     $('.nameTomagotchi').remove();
     timePasses();
+
 });
 
 // IMPLEMENT A TIMER
@@ -116,19 +117,27 @@ const timePasses = () => {
         }
 
         console.log('timer is working');
-      }, 100);
+        moveGoat();
+      }, 1000);
+
 };
 
-// while(newTomagotchi.hunger < 10 || newTomagotchi.sleepiness < 10 || newTomagotchi.boredom < 10){
-//     $('#myTomagotchiPic').velocity("fadeIn", { duration: 1500 });
-// };
+
 
 
 // BUILD A GAME OVER FUNCTION
 
 const gameOver = () => {
     window.location.reload(true);
-    alert('GAME OVER: Your Goat has died.')
+    alert('GAME OVER: Your Goat has died. Press OK to play again.')
 };
 
 
+// ANIMATION FUNCTION
+
+const moveGoat = () => {
+    // console.log('Please move goat!');
+    $("#myTomagotchiPic").velocity({"translateX": "1000px"}, 1500, () => { 
+        $("#myTomagotchiPic").velocity({"translateX": "100px"}, 1500) 
+     })
+};
