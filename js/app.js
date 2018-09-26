@@ -41,26 +41,64 @@ console.log(newTomagotchi);
 // CREATE BUTTONS TO INTERACT WITH TOMAGOTCHI
 
 $('#feed').on('click', () => {
-    $('#hunger').text(`Hunger: ${newTomagotchi.hunger}  `);
-    newTomagotchi.hunger--;
+    if(newTomagotchi.hunger >= 0){
+        $('#hunger').text(`Hunger: ${newTomagotchi.hunger}  `);
+        newTomagotchi.hunger--;
+        if(newTomagotchi.age < 1){
+            $('#myTomagotchiPic').attr('src', 'http://img-aws.ehowcdn.com/750x428p/photos.demandstudios.com/getty/article/142/194/98433385.jpg')
+        }
+        if(newTomagotchi.age >= 1){
+            $('#myTomagotchiPic').attr('src', 'http://c1.thejournal.ie/media/2013/01/shutterstock_115775710-390x285.jpg')
+        }  
+        if(newTomagotchi.age >= 2){
+            $('#myTomagotchiPic').attr('src', 'https://spoonuniversity.com/wp-content/uploads/sites/56/2016/07/LeBron-James-Cheat-Food-STACK.jpg')
+        }  
+    }
+
     //console.log('Lets eat!');
 });
 
 $('#lights').on('click', () => {
-    $('#sleepiness').text(`Sleepiness: ${newTomagotchi.sleepiness}  `);
-    newTomagotchi.sleepiness--;
+    if(newTomagotchi.sleepiness >= 0){
+        $('#sleepiness').text(`Sleepiness: ${newTomagotchi.sleepiness}  `);
+        newTomagotchi.sleepiness--;
+        if(newTomagotchi.age < 1){
+            $('#myTomagotchiPic').attr('src', 'https://o6txaleu22-flywheel.netdna-ssl.com/wp-content/uploads/2015/04/IMG_0604.jpg')
+        }
+        if(newTomagotchi.age === 1){
+            $('#myTomagotchiPic').attr('src', 'https://petstuffguide.com/wp-content/uploads/2017/10/33-1.jpg')
+        }
+        if(newTomagotchi.age === 2){
+            $('#myTomagotchiPic').attr('src', 'https://images.beinsports.com/Yp_vsYUTi8-xLCfBkPtNdVVEJy0=/full-fit-in/1000x0/lebronjames-cropped_n44jqv6ftj211hyei2y8zrzch.jpg')
+        }  
+}
     //console.log('Im tired!');
 });
 
 $('#play').on('click', () => {
-    $('#boredom').text(`Boredom: ${newTomagotchi.boredom}  `);
-    newTomagotchi.boredom--;
+    if(newTomagotchi.boredom >= 0){
+        $('#boredom').text(`Boredom: ${newTomagotchi.boredom}  `);
+        newTomagotchi.boredom--;
+        if(newTomagotchi.age <= 1){
+            $('#myTomagotchiPic').attr('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ussTFwt7DSuRgzZm5bZBdbMwVXBRsD-eQPwPFWh2T6gUslRc')
+        }
+        if(newTomagotchi.age >= 1){
+            $('#myTomagotchiPic').attr('src', 'http://i.imgur.com/ekUfKc1.jpg')
+        }
+        if(newTomagotchi.age >= 2){
+            $('#myTomagotchiPic').attr('src', 'https://static01.nyt.com/images/2018/06/08/sports/lebron-promo/lebron-promo-articleLarge.gif')
+        }  
+    }
     //console.log('Lets play!');
 });
 
 // NAME THE TOMAGOTCHI
 
 $('#enterName').on('click', () => {
+    $name = ('<span id="name"></span>')
+    $age = ('<span id="age">Age: 0</span>')
+    $('.namePlace').append($name)
+    $('.namePlace').append($age);
     const $tomagotchiName = $('input').val();
     $('#name').text(`Name: ${$tomagotchiName}  `);
     $('.nameTomagotchi').remove();
@@ -108,17 +146,9 @@ const timePasses = () => {
             gameOver();
         }
 
-        if(newTomagotchi.age >= 1){
-            $('#myTomagotchiPic').attr('src', 'https://www.mcpheebros.com/mcp/wp-content/uploads/2016/11/goat-5-700x450.jpg')
-        }
-
-        if(newTomagotchi.age >= 2){
-            $('#myTomagotchiPic').attr('src', 'https://res.cloudinary.com/teepublic/image/private/s--vfs-_Xf_--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1509079271/production/designs/2003658_1.jpg')
-        }
-
         console.log('timer is working');
         moveGoat();
-      }, 1000);
+      }, 500);
 
 };
 

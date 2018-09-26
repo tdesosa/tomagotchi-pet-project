@@ -1,17 +1,21 @@
 body {
-    /* background: url('http://www.lord-of-the-rings.org/collections/maps/map10[1].jpg'); */
-    background-color: orangered;
+    background: url('https://odis.homeaway.com/odis/listing/65d6eedc-8953-4575-8746-2a13e6d205e2.c10.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   h1 {
     text-align: center;
-    border-color: black;
-    border-style: dashed;
     width: 700px;
-    margin: 10px auto;
+    margin: 25px auto;
     padding: 10px;
     font-family: 'Notable', sans-serif;
-    background-color: grey;
+    color: white;
+    background-color: maroon;
+    opacity: .7;
+    border-color: grey;
+    border-style: dashed;
   }
   
   #myTomagotchiPic {
@@ -20,22 +24,23 @@ body {
     margin: 10px;
     border-color: black;
     border-style: dotted;
-    border-radius: 25px;
+    border-radius: 75px;
   }
 
   .metrics {
     text-align: center;
     position: center; 
-    color: black;
+    color: white;
     font-family: 'Notable', sans-serif;
-    font-size: 25px;
-    margin: 10px auto;
+    font-size: 20px;
+    margin: 25px auto;
     padding: 10px;
-    width: 750px;
+    width: 600px;
     background-clip: padding-box;
-    background-color: red;
-    border-color: black;
-    border-bottom-style: dashed;
+    background-color: black;
+    border-color: grey;
+    border-style: dashed;
+    opacity: .8;
   }
 
   #hunger {
@@ -57,6 +62,11 @@ body {
     margin: 10px;
     padding: 10px;
     width: 250px;
+    color: red;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
   }
 
   .metricButtons {
@@ -72,6 +82,12 @@ body {
     height: 50px;
     font-size: 18px;
     font-family: 'Notable', sans-serif;
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
+    margin: 10px;
   }
 
   #lights {
@@ -79,6 +95,12 @@ body {
     height: 50px;
     font-size: 18px;
     font-family: 'Notable', sans-serif;
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
+    margin: 10px;
   }
 
   #play {
@@ -86,6 +108,12 @@ body {
     height: 50px;
     font-size: 18px;
     font-family: 'Notable', sans-serif;
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
+    margin: 10px;
   }
 
   input {
@@ -94,38 +122,65 @@ body {
     width: 150px;
     height: 40px;
     font-size: 18px;
-    margin: 10px;
+    opacity: .8;
   }
 
   h2 {
     font-family: 'Notable', sans-serif;
     display: inline-block;
     margin: 10px;
+    padding: 10px;
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
   }
 
   #enterName {
     font-family: 'Notable', sans-serif;
     display: inline-block;
     width: 100px;
-    height: 40px;
+    height: 50px;
     font-size: 18px;
-    margin: 10px;
-    padding: 10px;
+    text-align: center;
+    /* margin: 10px;
+    padding: 10px; */
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
   }
 
-  .namePlace {
+  .nameTomagotchi {
+    text-align: center;
+  }
+
+  #name {
     font-family: 'Notable', sans-serif;
     font-style: bold;
     font-size: 25px;
     margin: 10px;
     padding: 10px;
-    /* border-color: black;
-    border-style: dashed; */
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
   }
 
-  /* .nameTomagotchi {
+  #age {
+    font-family: 'Notable', sans-serif;
     font-style: bold;
     font-size: 25px;
     margin: 10px;
-    display: inline-block;
-  } */
+    padding: 10px;
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border-color: grey;
+    border-style: dashed;
+  }
+
+
